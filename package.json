@@ -1,12 +1,32 @@
 {
-  "name": "portfolio",
+  "name": "koksing-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sing's website",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write .",
+    "lint": "next lint"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Kok Sing",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.0",
+    "@chakra-ui/react": "^2.0.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.0",
+    "next": "^12.1.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "three": "^0.139.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-next": "^12.1.5",
+    "prettier": "^2.6.2"
+  }
 }
