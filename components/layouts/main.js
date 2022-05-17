@@ -1,22 +1,27 @@
 import Navbar from './navbar.js'
-import {Box, Container} from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import Head from 'next/head'
+import VoxelDog from '../voxel-dog.js'
+import NoSsr from '../no-ssr.js'
 
-const Main = ({children, router}) => {
-    return(
-        <Box as='main' pb={8}>
-            <Head>
-                <meta name='viewport' content='width=device-width, initial=1' />
-                <title>Kok Sing - HomePage</title>
-            </Head>
+const Main = ({ children, router }) => {
+  return (
+    <Box as="main" pb={8}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial=1" />
+        <title>Kok Sing - HomePage</title>
+      </Head>
 
-            <Navbar path={router.asPath}/>
+      <Navbar path={router.asPath} />
 
-            <Container maxW='container.md' pt={14}>
-                {children}
-            </Container>
-        </Box>
-    )
+      <Container maxW="container.md" pt={14}>
+        <NoSsr>
+          <VoxelDog />
+        </NoSsr>
+        {children}
+      </Container>
+    </Box>
+  )
 }
 
 export default Main
